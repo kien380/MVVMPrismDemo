@@ -1,2 +1,7 @@
 /.vs/MVVMPrismDemo/v15/*.suo
 /packages/CommonServiceLocator.1.3
+/packages
+/MVVMPrismDemo/MVVMPrismDemo.Android/obj
+/MVVMPrismDemo/MVVMPrismDemo.iOS/obj
+/MVVMPrismDemo/MVVMPrismDemo/obj
+/MVVMPrismDemo/MVVMPrismDemo/bin
