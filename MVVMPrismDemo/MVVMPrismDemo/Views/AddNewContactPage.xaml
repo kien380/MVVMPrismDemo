@@ -1,0 +1,83 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMPrismDemo.Views.AddNewContactPage"
+             Title="{Binding PageTitle}">
+    <ContentPage.Content>
+        <Grid Padding="20"
+              Margin="0,100,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Name-->
+            <Label Text="Name:"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   Style="{StaticResource LabelFieldStyle}"/>
+            <Entry Placeholder="Enter name"
+                   Text="{Binding Name}"
+                   Grid.Column="1"
+                   Grid.Row="0"
+                   Style="{StaticResource EntryFieldStyle}"/>
+
+            <!-- Phone no -->
+            <Label Text="Phone no:"
+                   Grid.Column="0"
+                   Grid.Row="1"
+                   Style="{StaticResource LabelFieldStyle}"/>
+            <Entry Placeholder="Enter phone number"
+                   Text="{Binding PhoneNo}"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   Style="{StaticResource EntryFieldStyle}"/>
+
+            <!--Gender-->
+            <Label Text="Gender:"
+                   Grid.Column="0"
+                   Grid.Row="2"
+                   Style="{StaticResource LabelFieldStyle}"/>
+            <Picker Grid.Column="1"
+                    Grid.Row="2"
+                    Style="{StaticResource PickerFieldStyle}"
+                    WidthRequest="100"
+                    SelectedItem="{Binding Gender}"
+                    Title="Pick gender">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!--Buttons Cancel & Save-->
+            <Grid Grid.Column="0"
+                  Grid.Row="3"
+                  Grid.ColumnSpan="2"
+                  VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Text="Cancel"
+                        TextColor="White"
+                        Command="{Binding CancelCommand}"
+                        BackgroundColor="Blue"
+                        Grid.Column="0"/>
+                <Button Text="Save"
+                        TextColor="White"
+                        Command="{Binding SaveCommand}"
+                        BackgroundColor="Green"
+                        Grid.Column="1"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

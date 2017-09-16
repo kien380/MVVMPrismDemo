@@ -1,0 +1,94 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMPrismDemo.Views.DetailContactPage"
+             Title="Contact">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit"
+                     Command="{Binding EditCommand}"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <Grid Padding="5"
+              Margin="20,100,20,0"
+              RowSpacing="20"
+              ColumnSpacing="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="0"
+                         Grid.ColumnSpan="2"
+                         Grid.Column="0"
+                         Spacing="20">
+                <!--Avatar-->
+                <Image Source="{Binding Avatar}"
+                       HeightRequest="120"
+                       WidthRequest="120"
+                       VerticalOptions="End"/>
+                
+                <!--Call icon-->
+                <Image Source="call.png"
+                       Style="{StaticResource ImageActionIconStyle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MakeCallCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <!--SMS icon-->
+                <Image Source="sms.png"
+                       Style="{StaticResource ImageActionIconStyle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SendSmsComand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <!--Email icon-->
+                <Image Source="email.png"
+                       Style="{StaticResource ImageActionIconStyle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SendEmailCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            
+            <!--Name-->
+            <Label Text="Name:"
+                   Grid.Column="0"
+                   Grid.Row="1"
+                   Style="{StaticResource LabelFieldStyle}"/>
+            <Label Text="{Binding Name}"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   Style="{StaticResource LabelDetailStyle}"/>
+
+            <!-- Phone no -->
+            <Label Text="Phone no:"
+                   Grid.Column="0"
+                   Grid.Row="2"
+                   Style="{StaticResource LabelFieldStyle}"/>
+            <Label Text="{Binding PhoneNo}"
+                   Grid.Column="1"
+                   Grid.Row="2"
+                   Style="{StaticResource LabelDetailStyle}"/>
+
+            <!--Gender-->
+            <Label Text="Gender:"
+                   Grid.Column="0"
+                   Grid.Row="3"
+                   Style="{StaticResource LabelFieldStyle}"/>
+            <Label Text="{Binding Gender}"
+                   Grid.Column="1"
+                   Grid.Row="3"
+                   Style="{StaticResource LabelDetailStyle}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

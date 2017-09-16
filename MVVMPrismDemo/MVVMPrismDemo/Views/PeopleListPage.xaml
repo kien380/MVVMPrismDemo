@@ -1,0 +1,42 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMPrismDemo.Views.PeopleListPage"
+             Title="List Contacts"
+             x:Name="RootPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Command="{Binding AddCommand}"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="List contacts" 
+                   TextColor="Green"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="20"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <ListView x:Name="ListViewContacts"
+                      ItemsSource="{Binding Contacts}"
+                      ItemTapped="ListViewContacts_OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding Avatar}"
+                                   Text="{Binding Name}"
+                                   TextColor="Blue"
+                                   Detail="{Binding PhoneNo}"
+                                   DetailColor="Orange">
+                            <ImageCell.ContextActions>
+                                <MenuItem Text="Delete"
+                                          Command="{Binding BindingContext.DeleteCommand, 
+                                                            Source={x:Reference RootPage}}"
+                                          CommandParameter="{Binding}"/>
+                            </ImageCell.ContextActions>
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<unity:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:unity="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+             x:Class="MVVMPrismDemo.App">
+	<Application.Resources>
+
+	    <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <!--LabelFieldStyle-->
+            <Style x:Key="LabelFieldStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="Orange"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+            </Style>
+
+            <!--EntryFieldStyle-->
+            <Style x:Key="EntryFieldStyle" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="Gray"/>
+                <Setter Property="TextColor" Value="Blue"/>
+            </Style>
+
+            <!--PickerFieldStyle-->
+            <Style x:Key="PickerFieldStyle" TargetType="Picker">
+                <Setter Property="TextColor" Value="Blue"/>
+            </Style>
+
+
+            <!--LabelFieldStyle-->
+            <Style x:Key="LabelDetailStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+            </Style>
+
+            <Style x:Key="ImageActionIconStyle" TargetType="Image">
+                <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="WidthRequest" Value="30"/>
+                <Setter Property="VerticalOptions" Value="End"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</unity:PrismApplication>
