@@ -17,7 +17,19 @@ namespace MVVMPrismDemo
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync(PageManager.NavigationPage + "/" + PageManager.PeopleListPage);
+
+            GetHomePage();
+        }
+
+        private void GetHomePage()
+        {
+            string homePage = PageManager.MultiplePage(new []
+            {
+                PageManager.HomePage, PageManager.NavigationPage,
+                PageManager.PeopleListPage
+            });
+
+            NavigationService.NavigateAsync(homePage);
         }
 
         protected override void RegisterTypes()
@@ -26,6 +38,9 @@ namespace MVVMPrismDemo
                 new ContainerControlledLifetimeManager());
 
             Container.RegisterTypeForNavigation<NavigationPage>(PageManager.NavigationPage);
+            Container.RegisterTypeForNavigation<HomePage>(PageManager.HomePage);
+
+            // Contacts pages
             Container.RegisterTypeForNavigation<PeopleListPage>(PageManager.PeopleListPage);
             Container.RegisterTypeForNavigation<AddNewContactPage>(PageManager.AddNewContactPage);
             Container.RegisterTypeForNavigation<DetailContactPage>(PageManager.DetailContactPage);

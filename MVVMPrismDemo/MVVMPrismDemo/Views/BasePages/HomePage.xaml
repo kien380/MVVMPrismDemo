@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMPrismDemo.Views.HomePage">
+    <MasterDetailPage.Master>
+        <NavigationPage Title="Home Page">
+            <x:Arguments>
+                <ContentPage Title="Menu">
+                    <StackLayout VerticalOptions="CenterAndExpand"
+                                 Padding="20">
+                        <Button Text="Contacts"
+                                HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

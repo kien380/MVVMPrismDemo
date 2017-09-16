@@ -45,17 +45,21 @@
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\MockDataService.cs" />
-    <Compile Include="ViewModels\AddNewContactPageViewModel.cs" />
-    <Compile Include="ViewModels\DetailContactPageViewModel.cs" />
-    <Compile Include="ViewModels\PeopleListPageViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\AddNewContactPage.xaml.cs">
+    <Compile Include="ViewModels\ContactsPages\AddNewContactPageViewModel.cs" />
+    <Compile Include="ViewModels\ContactsPages\DetailContactPageViewModel.cs" />
+    <Compile Include="ViewModels\BasePages\HomePageViewModel.cs" />
+    <Compile Include="ViewModels\ContactsPages\PeopleListPageViewModel.cs" />
+    <Compile Include="ViewModels\BasePages\ViewModelBase.cs" />
+    <Compile Include="Views\ContactsPages\AddNewContactPage.xaml.cs">
       <DependentUpon>AddNewContactPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DetailContactPage.xaml.cs">
+    <Compile Include="Views\ContactsPages\DetailContactPage.xaml.cs">
       <DependentUpon>DetailContactPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PeopleListPage.xaml.cs">
+    <Compile Include="Views\BasePages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactsPages\PeopleListPage.xaml.cs">
       <DependentUpon>PeopleListPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -101,19 +105,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\PeopleListPage.xaml">
+    <EmbeddedResource Include="Views\ContactsPages\PeopleListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\AddNewContactPage.xaml">
+    <EmbeddedResource Include="Views\ContactsPages\AddNewContactPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\DetailContactPage.xaml">
+    <EmbeddedResource Include="Views\ContactsPages\DetailContactPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\BasePages\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
