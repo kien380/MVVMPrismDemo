@@ -2,7 +2,9 @@
 using MVVMPrismDemo.Interfaces;
 using MVVMPrismDemo.Managers;
 using MVVMPrismDemo.Services;
-using MVVMPrismDemo.Views;
+using MVVMPrismDemo.Services.DataService;
+using MVVMPrismDemo.Views.BasePages;
+using MVVMPrismDemo.Views.ContactsPages;
 using Prism.Unity;
 using Xamarin.Forms;
 

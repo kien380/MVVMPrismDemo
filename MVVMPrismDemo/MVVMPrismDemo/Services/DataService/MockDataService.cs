@@ -6,7 +6,7 @@ using MVVMPrismDemo.Enums;
 using MVVMPrismDemo.Interfaces;
 using MVVMPrismDemo.Models;
 
-namespace MVVMPrismDemo.Services
+namespace MVVMPrismDemo.Services.DataService
 {
     public class MockDataService : IDataService
     {

@@ -2,7 +2,7 @@
 using MVVMPrismDemo.Managers;
 using Prism.Navigation;
 
-namespace MVVMPrismDemo.ViewModels
+namespace MVVMPrismDemo.ViewModels.BasePages
 {
     public class HomePageViewModel : ViewModelBase
     {

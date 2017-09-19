@@ -2,11 +2,12 @@
 using MVVMPrismDemo.Enums;
 using MVVMPrismDemo.Managers;
 using MVVMPrismDemo.Models;
+using MVVMPrismDemo.ViewModels.BasePages;
 using Plugin.Messaging;
 using Prism.Commands;
 using Prism.Navigation;
 
-namespace MVVMPrismDemo.ViewModels
+namespace MVVMPrismDemo.ViewModels.ContactsPages
 {
     public class DetailContactPageViewModel : ViewModelBase
     {

@@ -5,11 +5,12 @@ using MVVMPrismDemo.Enums;
 using MVVMPrismDemo.Interfaces;
 using MVVMPrismDemo.Managers;
 using MVVMPrismDemo.Models;
+using MVVMPrismDemo.ViewModels.BasePages;
 using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
 
-namespace MVVMPrismDemo.ViewModels
+namespace MVVMPrismDemo.ViewModels.ContactsPages
 {
     public class PeopleListPageViewModel : ViewModelBase
     {

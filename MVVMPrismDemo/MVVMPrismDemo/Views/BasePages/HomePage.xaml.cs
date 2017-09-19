@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MVVMPrismDemo.Views
+namespace MVVMPrismDemo.Views.BasePages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : MasterDetailPage, IMasterDetailPageOptions

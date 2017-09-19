@@ -2,10 +2,11 @@
 using MVVMPrismDemo.Enums;
 using MVVMPrismDemo.Interfaces;
 using MVVMPrismDemo.Models;
+using MVVMPrismDemo.ViewModels.BasePages;
 using Prism.Commands;
 using Prism.Navigation;
 
-namespace MVVMPrismDemo.ViewModels
+namespace MVVMPrismDemo.ViewModels.ContactsPages
 {
     public class AddNewContactPageViewModel : ViewModelBase
     {

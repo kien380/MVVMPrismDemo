@@ -1,12 +1,11 @@
-﻿using System;
-using MVVMPrismDemo.Models;
-using MVVMPrismDemo.ViewModels;
+﻿using MVVMPrismDemo.Models;
+using MVVMPrismDemo.ViewModels.ContactsPages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MVVMPrismDemo.Views
+namespace MVVMPrismDemo.Views.ContactsPages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PeopleListPage : ContentPage
 	{
 		public PeopleListPage ()
